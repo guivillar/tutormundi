@@ -24,6 +24,54 @@
                 </div>
             </div>
             <button class="botao-elogiar">ELOGIAR</button>
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <p class="texto-envie-elogio">Envie um elogio</p>
+                                </div>
+                            </div>
+                            <div class="row" style="text-align: left;">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-2">
+                                    <button onclick="selecaoBotao1()" id="button-1" class="botoes-elogio">
+                                        <object id="img1" class="img-botao-elogio" type="image/svg+xml" data="img/lampada.svg"></object>
+                                        <p id="texto-btn1" class="texto-botao-elogio">Estimula a criatividade</p>
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button onclick="selecaoBotao2()" id="button-2" class="botoes-elogio">
+                                        <object id="img2" class="img-botao-elogio" type="image/svg+xml" data="img/lupa.svg"></object>
+                                        <p id="texto-btn2" class="texto-botao-elogio">Estimula a curiosidade</p>
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button onclick="selecaoBotao3()" id="button-3" class="botoes-elogio">
+                                        <object id="img3" class="img-botao-elogio" type="image/svg+xml" data="img/canivete.svg"></object>
+                                        <p id="texto-btn3" class="texto-botao-elogio">Se adapta à necessidade</p>
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button onclick="selecaoBotao4()" id="button-4" class="botoes-elogio">
+                                        <object id="img4" class="img-botao-elogio" type="image/svg+xml" data="img/checked-sheet.svg"></object>
+                                        <p id="texto-btn4" class="texto-botao-elogio">Ótima <br> didática</p>
+                                    </button>
+                                </div>
+                                <div class="col-md-2">
+                                    <button onclick="selecaoBotao5()" id="button-5" class="botoes-elogio">
+                                        <object id="img5" class="img-botao-elogio" type="image/svg+xml" data="img/smile-face.svg"></object>
+                                        <p id="texto-btn5" class="texto-botao-elogio">Gente boasíssima</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container div-botoes-baixo">
                 <div class="row">
                     <div class="col-md-4"></div>
@@ -36,5 +84,92 @@
             </div>
         </div>
     </body>
+    <script>
+        function selecaoBotao1(){
+            document.getElementById("texto-btn1").style.color = "#ffffff";
+            document.getElementById("button-1").style.backgroundColor = "#2cc6d0";
+            document.getElementById('img1').setAttribute("data", "img/lampada-white.svg");
+            document.getElementById("texto-btn2").style.color = "#2cc6d0";
+            document.getElementById("button-2").style.backgroundColor = "#ffffff";
+            document.getElementById('img2').setAttribute("data", "img/lupa.svg");
+            document.getElementById("texto-btn3").style.color = "#2cc6d0";
+            document.getElementById("button-3").style.backgroundColor = "#ffffff";
+            document.getElementById('img3').setAttribute("data", "img/canivete.svg");
+            document.getElementById("texto-btn4").style.color = "#2cc6d0";
+            document.getElementById("button-4").style.backgroundColor = "#ffffff";
+            document.getElementById('img4').setAttribute("data", "img/checked-sheet.svg");
+            document.getElementById("texto-btn5").style.color = "#2cc6d0";
+            document.getElementById("button-5").style.backgroundColor = "#ffffff";
+            document.getElementById('img5').setAttribute("data", "img/smile-face.svg");
+        }
+        function selecaoBotao2(){
+            document.getElementById("texto-btn1").style.color = "#2cc6d0";
+            document.getElementById("button-1").style.backgroundColor = "#ffffff";
+            document.getElementById('img1').setAttribute("data", "img/lampada.svg");
+            document.getElementById("texto-btn2").style.color = "#ffffff";
+            document.getElementById("button-2").style.backgroundColor = "#2cc6d0";
+            document.getElementById('img2').setAttribute("data", "img/lupa-white.svg");
+            document.getElementById("texto-btn3").style.color = "#2cc6d0";
+            document.getElementById("button-3").style.backgroundColor = "#ffffff";
+            document.getElementById('img3').setAttribute("data", "img/canivete.svg");
+            document.getElementById("texto-btn4").style.color = "#2cc6d0";
+            document.getElementById("button-4").style.backgroundColor = "#ffffff";
+            document.getElementById('img4').setAttribute("data", "img/checked-sheet.svg");
+            document.getElementById("texto-btn5").style.color = "#2cc6d0";
+            document.getElementById("button-5").style.backgroundColor = "#ffffff";
+            document.getElementById('img5').setAttribute("data", "img/smile-face.svg");
+        }
+        function selecaoBotao3(){
+            document.getElementById("texto-btn1").style.color = "#2cc6d0";
+            document.getElementById("button-1").style.backgroundColor = "#ffffff";
+            document.getElementById('img1').setAttribute("data", "img/lampada.svg");
+            document.getElementById("texto-btn2").style.color = "#2cc6d0";
+            document.getElementById("button-2").style.backgroundColor = "#ffffff";
+            document.getElementById('img2').setAttribute("data", "img/lupa.svg");
+            document.getElementById("texto-btn3").style.color = "#ffffff";
+            document.getElementById("button-3").style.backgroundColor = "#2cc6d0";
+            document.getElementById('img3').setAttribute("data", "img/canivete-white.svg");
+            document.getElementById("texto-btn4").style.color = "#2cc6d0";
+            document.getElementById("button-4").style.backgroundColor = "#ffffff";
+            document.getElementById('img4').setAttribute("data", "img/checked-sheet.svg");
+            document.getElementById("texto-btn5").style.color = "#2cc6d0";
+            document.getElementById("button-5").style.backgroundColor = "#ffffff";
+            document.getElementById('img5').setAttribute("data", "img/smile-face.svg");
+        }
+        function selecaoBotao4(){
+            document.getElementById("texto-btn1").style.color = "#2cc6d0";
+            document.getElementById("button-1").style.backgroundColor = "#ffffff";
+            document.getElementById('img1').setAttribute("data", "img/lampada.svg");
+            document.getElementById("texto-btn2").style.color = "#2cc6d0";
+            document.getElementById("button-2").style.backgroundColor = "#ffffff";
+            document.getElementById('img2').setAttribute("data", "img/lupa.svg");
+            document.getElementById("texto-btn3").style.color = "#2cc6d0";
+            document.getElementById("button-3").style.backgroundColor = "#ffffff";
+            document.getElementById('img3').setAttribute("data", "img/canivete.svg");
+            document.getElementById("texto-btn4").style.color = "#ffffff";
+            document.getElementById("button-4").style.backgroundColor = "#2cc6d0";
+            document.getElementById('img4').setAttribute("data", "img/checked-sheet-white.svg");
+            document.getElementById("texto-btn5").style.color = "#2cc6d0";
+            document.getElementById("button-5").style.backgroundColor = "#ffffff";
+            document.getElementById('img5').setAttribute("data", "img/smile-face.svg");
+        }
+        function selecaoBotao5(){
+            document.getElementById("texto-btn1").style.color = "#2cc6d0";
+            document.getElementById("button-1").style.backgroundColor = "#ffffff";
+            document.getElementById('img1').setAttribute("data", "img/lampada.svg");
+            document.getElementById("texto-btn2").style.color = "#2cc6d0";
+            document.getElementById("button-2").style.backgroundColor = "#ffffff";
+            document.getElementById('img2').setAttribute("data", "img/lupa.svg");
+            document.getElementById("texto-btn3").style.color = "#2cc6d0";
+            document.getElementById("button-3").style.backgroundColor = "#ffffff";
+            document.getElementById('img3').setAttribute("data", "img/canivete.svg");
+            document.getElementById("texto-btn4").style.color = "#2cc6d0";
+            document.getElementById("button-4").style.backgroundColor = "#ffffff";
+            document.getElementById('img4').setAttribute("data", "img/checked-sheet.svg");
+            document.getElementById("texto-btn5").style.color = "#ffffff";
+            document.getElementById("button-5").style.backgroundColor = "#2cc6d0";
+            document.getElementById('img5').setAttribute("data", "img/smile-face-white.svg");
+        }
+    </script>
 </html>
                 
