@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -26,7 +27,7 @@
                 </div>
             </div>
             <button id="botaoElogiar" onclick="btnElogiar()" class="botao-elogiar">ELOGIAR</button>
-            <div id="divElogiar" style="display: none;">
+            <div id="divElogiar">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-1"></div>
@@ -72,14 +73,31 @@
                             </div>
                         </div>
                     </div>
+                    <div style="margin-top: 5%;" class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <p class="texto-envie-elogio">Deixe um recado</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <textarea class="textarea-elogio"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="container div-botoes-baixo">
+            <div style="margin-bottom: 10%;" class="container div-botoes-baixo">
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <button style="font-size: 20px;" class="botao-pular btn">PULAR</button>
-                        <button style="border-radius: 100px; border-color: #2cc6d0; background-color: #2cc6d0; font-size: 20px;" class="btn btn-primary">CONFIRMAR</button>
+                        <button onclick="btnPular()" style="font-size: 20px;" class="botao-pular btn">PULAR</button>
+                        <button onclick="btnConfirmar()" style="border-radius: 100px; border-color: #2cc6d0; background-color: #2cc6d0; font-size: 20px;" class="btn btn-primary">CONFIRMAR</button>
                     </div>
                     <div class="col-md-4"></div>
                 </div>
@@ -87,10 +105,19 @@
         </div>
     </body>
     <script>
+        var w = window.screen.availWidth;
         $("#botaoElogiar").click(function(){
-        $("#divElogiar").toggle();
-        $("#botaoElogiar").toggle();
+            if (w <= 768){
+                $("#divElogiar").toggle();
+                $("#botaoElogiar").toggle(); 
+            }
+            else{
+                $("#divElogiarM").toggle();
+                $("#botaoElogiar").toggle();
+            }
+            
         });
+        
         function selecaoBotao1(){
             document.getElementById("texto-btn1").style.color = "#ffffff";
             document.getElementById("button-1").style.backgroundColor = "#2cc6d0";
@@ -108,6 +135,7 @@
             document.getElementById("button-5").style.backgroundColor = "#ffffff";
             document.getElementById('img5').setAttribute("data", "img/smile-face.svg");
         }
+        
         function selecaoBotao2(){
             document.getElementById("texto-btn1").style.color = "#2cc6d0";
             document.getElementById("button-1").style.backgroundColor = "#ffffff";
@@ -125,6 +153,7 @@
             document.getElementById("button-5").style.backgroundColor = "#ffffff";
             document.getElementById('img5').setAttribute("data", "img/smile-face.svg");
         }
+        
         function selecaoBotao3(){
             document.getElementById("texto-btn1").style.color = "#2cc6d0";
             document.getElementById("button-1").style.backgroundColor = "#ffffff";
@@ -142,6 +171,7 @@
             document.getElementById("button-5").style.backgroundColor = "#ffffff";
             document.getElementById('img5').setAttribute("data", "img/smile-face.svg");
         }
+        
         function selecaoBotao4(){
             document.getElementById("texto-btn1").style.color = "#2cc6d0";
             document.getElementById("button-1").style.backgroundColor = "#ffffff";
@@ -159,6 +189,7 @@
             document.getElementById("button-5").style.backgroundColor = "#ffffff";
             document.getElementById('img5').setAttribute("data", "img/smile-face.svg");
         }
+        
         function selecaoBotao5(){
             document.getElementById("texto-btn1").style.color = "#2cc6d0";
             document.getElementById("button-1").style.backgroundColor = "#ffffff";
@@ -175,6 +206,14 @@
             document.getElementById("texto-btn5").style.color = "#ffffff";
             document.getElementById("button-5").style.backgroundColor = "#2cc6d0";
             document.getElementById('img5').setAttribute("data", "img/smile-face-white.svg");
+        }
+        
+        function btnPular(){
+            alert("Você pulou!");
+        }
+        
+        function btnConfirmar(){
+            alert("Você confirmou!");
         }
     </script>
 </html>
