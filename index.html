@@ -26,8 +26,8 @@
                     <div class="col-md-4"></div>
                 </div>
             </div>
-            <button id="botaoElogiar" onclick="btnElogiar()" class="botao-elogiar">ELOGIAR</button>
-            <div id="divElogiar">
+            <button id="botaoElogiar" class="botao-elogiar">ELOGIAR</button>
+            <div style="display: none;" id="divElogiar">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-1"></div>
@@ -92,6 +92,59 @@
                     </div>
                 </div>
             </div>
+            <div style="margin-top: 5%; display: none;" id="divElogiarM">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <p class="texto-envie-elogio">Envie um elogio</p>
+                        </div>
+                    </div>
+                    <div class="wrapper_child">
+                        <div class="tab">
+                            <button onclick="selecaoBotao1()" id="button-1" class="botoes-elogio">
+                                <object id="img1" class="img-botao-elogio" type="image/svg+xml" data="img/lampada.svg"></object>
+                                <p id="texto-btn1" class="texto-botao-elogio">Estimula a criatividade</p>
+                            </button>
+                        </div>
+                        <div class="tab">
+                            <button onclick="selecaoBotao2()" id="button-2" class="botoes-elogio">
+                                <object id="img2" class="img-botao-elogio" type="image/svg+xml" data="img/lupa.svg"></object>
+                                <p id="texto-btn2" class="texto-botao-elogio">Estimula a curiosidade</p>
+                            </button>
+                        </div>
+                        <div class="tab">
+                            <button onclick="selecaoBotao3()" id="button-3" class="botoes-elogio">
+                                <object id="img3" class="img-botao-elogio" type="image/svg+xml" data="img/canivete.svg"></object>
+                                <p id="texto-btn3" class="texto-botao-elogio">Se adapta à necessidade</p>
+                            </button>
+                        </div>
+                        <div class="tab">
+                            <button onclick="selecaoBotao4()" id="button-4" class="botoes-elogio">
+                                <object id="img4" class="img-botao-elogio" type="image/svg+xml" data="img/checked-sheet.svg"></object>
+                                <p id="texto-btn4" class="texto-botao-elogio">Ótima <br> didática</p>
+                            </button>
+                        </div>
+                        <div class="tab">
+                            <button onclick="selecaoBotao5()" id="button-5" class="botoes-elogio">
+                                <object id="img5" class="img-botao-elogio" type="image/svg+xml" data="img/smile-face.svg"></object>
+                                <p id="texto-btn5" class="texto-botao-elogio">Gente boasíssima</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 5%;" class="container">
+                    <div class="col-md-10">
+                        <p class="texto-envie-elogio">Deixe um recado</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <textarea class="textarea-elogio"></textarea>
+                    </div>
+                </div>
+            </div>
             <div style="margin-bottom: 10%;" class="container div-botoes-baixo">
                 <div class="row">
                     <div class="col-md-4"></div>
@@ -107,7 +160,7 @@
     <script>
         var w = window.screen.availWidth;
         $("#botaoElogiar").click(function(){
-            if (w <= 768){
+            if (w >= 768){
                 $("#divElogiar").toggle();
                 $("#botaoElogiar").toggle(); 
             }
